@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '/src/components/logo.png'; // Import the logo
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,14 +10,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <span className="text-2xl font-bold text-secondary">Panki Trade</span>
+            {/* Replace text with the logo */}
+            <img src={logo} alt="Panki Trade Logo" className="h-10" />
           </div>
-          
+
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-secondary hover:text-primary transition-colors">Home</a>
-            <a href="#brands" className="text-secondary hover:text-primary transition-colors">Brands</a>
-            <a href="#products" className="text-secondary hover:text-primary transition-colors">Products</a>
-            <a href="#contact" className="text-secondary hover:text-primary transition-colors">Contact</a>
+            <a href="#home" className="text-secondary hover:text-primary transition-colors">Дома</a>
+            <a href="#brands" className="text-secondary hover:text-primary transition-colors">Брендови</a>
+            <a href="#products" className="text-secondary hover:text-primary transition-colors">Изработки</a>
+            <a href="#contact" className="text-secondary hover:text-primary transition-colors">Контакт</a>
           </div>
 
           <div className="md:hidden flex items-center">

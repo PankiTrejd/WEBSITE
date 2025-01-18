@@ -6,18 +6,17 @@ export default function Hero() {
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-5xl md:text-6xl font-bold text-secondary mb-6">
-          Welcome to <span className="text-primary">Panki Trade</span>
+       <span className="text-primary">Панки Трејд</span>
         </h1>
         <p className="text-xl text-secondary/80 mb-8 max-w-2xl mx-auto">
-          Discover our unique brands: Carsculp.com, CNC Decorates, and BelneD Crafts. 
-          We create custom vehicle silhouettes, CNC decorations, and handcrafted products.
+        <b> Вашиот партнер во бизнисот. </b>
         </p>
         <div className="space-x-4">
           <a href="#contact" className="btn-primary">
-            Contact Us
+          Контактирајте не
           </a>
           <a href="#brands" className="btn-secondary">
-            Learn More
+          Дознај повеќе
           </a>
         </div>
       </div>

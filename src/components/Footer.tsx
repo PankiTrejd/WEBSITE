@@ -31,13 +31,13 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
             <div className="space-y-2 text-white/60">
-              <a href="https://instagram.com/PankiTrejd" className="block hover:text-primary">Instagram</a>
+              <a href="https://instagram.com/pankitrejd" className="block hover:text-primary">Instagram</a>
               <a href="https://facebook.com/PankiTrejd" className="block hover:text-primary">Facebook</a>
             </div>
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-white/60">
-          <p>&copy; {new Date().getFullYear()} Panki Trade. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Панки Трејд ПК. Сите Права се задржани.</p>
         </div>
       </div>
     </footer>
