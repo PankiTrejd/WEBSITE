@@ -5,19 +5,19 @@ export default function Brands() {
   const brands = [
     {
       name: 'Carsculp.com',
-      description: 'Custom vehicle silhouettes with personalization options.',
+      description: 'Декоративни силуети од возила изработени од дрво и плексиглас.',
       icon: Car,
       image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=800',
     },
     {
       name: 'CNC Decorates',
-      description: 'Precision-crafted decorative items using CNC technology.',
+      description: 'Изработка и продажба на декорации од плексиглас и дрво.',
       icon: Package2,
       image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800',
     },
     {
       name: 'BelneD Crafts',
-      description: 'Handcrafted artisanal products made with care.',
+      description: 'Елементи од премиум плексиглас и дрво, ласерско сечени и рачно изработени.',
       icon: Hammer,
       image: 'https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&q=80&w=800',
     },
@@ -27,8 +27,8 @@ export default function Brands() {
     <section id="brands" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-secondary mb-4">Our Brands</h2>
-          <p className="text-xl text-secondary/80">Discover our family of innovative brands</p>
+          <h2 className="text-4xl font-bold text-secondary mb-4">Наши Страници</h2>
+          <p className="text-xl text-secondary/80">Дознајте повеќе за нашите изработки</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-12">
@@ -47,7 +47,7 @@ export default function Brands() {
                   <h3 className="text-xl font-semibold text-secondary">{brand.name}</h3>
                 </div>
                 <p className="text-secondary/80">{brand.description}</p>
-                <button className="mt-4 btn-secondary w-full">Learn More</button>
+                <button className="mt-4 btn-secondary w-full">Дознај Повеќе</button>
               </div>
             </div>
           ))}

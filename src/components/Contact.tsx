@@ -6,8 +6,8 @@ export default function Contact() {
     <section id="contact" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-secondary mb-4">Contact Us</h2>
-          <p className="text-xl text-secondary/80">Get in touch with our team</p>
+          <h2 className="text-4xl font-bold text-secondary mb-4">Контактирајте не денес!</h2>
+          <p className="text-xl text-secondary/80">Оставете ни податоци и информација за вашите потреби и нашиот тим ќе ве контактира!</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -36,7 +36,7 @@ export default function Contact() {
 
           <form className="space-y-6 bg-secondary p-8 rounded-lg">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-white">Name</label>
+              <label htmlFor="name" className="block text-sm font-medium text-white">Име</label>
               <input
                 type="text"
                 id="name"
@@ -44,7 +44,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-white">Email</label>
+              <label htmlFor="email" className="block text-sm font-medium text-white">Емаил</label>
               <input
                 type="email"
                 id="email"
@@ -52,7 +52,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-white">Message</label>
+              <label htmlFor="message" className="block text-sm font-medium text-white">Порака</label>
               <textarea
                 id="message"
                 rows={4}
@@ -63,7 +63,7 @@ export default function Contact() {
               type="submit"
               className="w-full btn-primary"
             >
-              Send Message
+              Испрати Барање
             </button>
           </form>
         </div>
