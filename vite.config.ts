@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   server: {
@@ -14,5 +13,5 @@ export default defineConfig({
     assetsDir: 'assets', // Directory for static assets
     sourcemap: true, // Enable source maps for debugging in production
   },
-  base: './', // Use relative paths for Netlify
+  base: './', // Use relative paths for Netlify or subdirectory hosting
 });
