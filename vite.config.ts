@@ -3,17 +3,16 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()], // Remove mkcert
+  plugins: [react()],
   server: {
-    https: false, // Disable HTTPS
-    port: 5174, // Use the port you need
-    strictPort: true, // Ensure the server fails if the port is not available
-    open: true, // Automatically open the browser
+    port: 5174, // Use the desired port
+    strictPort: true, // Fail if the port is not available
+    open: true, // Automatically open the browser in development
   },
   build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: true,
+    outDir: 'dist', // Output directory for the build files
+    assetsDir: 'assets', // Directory for static assets
+    sourcemap: true, // Enable source maps for debugging in production
   },
-  base: './',
+  base: './', // Use relative paths for Netlify
 });
