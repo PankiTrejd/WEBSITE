@@ -1,4 +1,3 @@
-import React from 'react';
 import { Car, Package2, Hammer } from 'lucide-react';
 
 export default function Brands() {
@@ -33,7 +32,10 @@ export default function Brands() {
 
         <div className="grid md:grid-cols-3 gap-12">
           {brands.map((brand) => (
-            <div key={brand.name} className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100">
+            <div
+              key={brand.name}
+              className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100"
+            >
               <div className="h-48 overflow-hidden">
                 <img
                   src={brand.image}

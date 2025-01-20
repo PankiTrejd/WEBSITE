@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Footer() {
   return (
     <footer className="bg-secondary text-white py-12">
@@ -8,7 +6,8 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Панки Трејд ПК</h3>
             <p className="text-white/60">
-            Продажба на плексиглас и репро-материјали. Изработка на светлечки реклами, декорации и 3Д букви.            </p>
+              Продажба на плексиглас и репро-материјали. Изработка на светлечки реклами, декорации и 3Д букви.
+            </p>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Наши Брендови</h4>
@@ -21,17 +20,37 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Брза Навигација</h4>
             <ul className="space-y-2 text-white/60">
-              <li><a href="#home" className="hover:text-primary">Дома</a></li>
-              <li><a href="#brands" className="hover:text-primary">Брендови</a></li>
-              <li><a href="#products" className="hover:text-primary">Изработки</a></li>
-              <li><a href="#contact" className="hover:text-primary">Контакт</a></li>
+              <li>
+                <a href="#home" className="hover:text-primary">
+                  Дома
+                </a>
+              </li>
+              <li>
+                <a href="#brands" className="hover:text-primary">
+                  Брендови
+                </a>
+              </li>
+              <li>
+                <a href="#products" className="hover:text-primary">
+                  Изработки
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-primary">
+                  Контакт
+                </a>
+              </li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
             <div className="space-y-2 text-white/60">
-              <a href="https://instagram.com/pankitrejd" className="block hover:text-primary">Instagram</a>
-              <a href="https://facebook.com/PankiTrejd" className="block hover:text-primary">Facebook</a>
+              <a href="https://instagram.com/pankitrejd" className="block hover:text-primary">
+                Instagram
+              </a>
+              <a href="https://facebook.com/PankiTrejd" className="block hover:text-primary">
+                Facebook
+              </a>
             </div>
           </div>
         </div>

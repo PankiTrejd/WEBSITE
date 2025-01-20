@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import logo from '/src/components/logo.png'; // Import the logo
 
@@ -16,9 +16,15 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-secondary hover:text-primary transition-colors">Дома</a>
-            <a href="#brands" className="text-secondary hover:text-primary transition-colors">Брендови</a>
-            <a href="#products" className="text-secondary hover:text-primary transition-colors">Изработки</a>
+            <a href="#home" className="text-secondary hover:text-primary transition-colors">
+              Дома
+            </a>
+            <a href="#brands" className="text-secondary hover:text-primary transition-colors">
+              Брендови
+            </a>
+            <a href="#products" className="text-secondary hover:text-primary transition-colors">
+              Изработки
+            </a>
 
             {/* Проекти Dropdown */}
             <div className="relative">
@@ -34,25 +40,27 @@ export default function Navbar() {
                     href="#project1"
                     className="block px-4 py-2 text-secondary hover:bg-primary hover:text-white transition-colors"
                   >
-                    Проект 1
+                    Hotel Termal Lux & Spa
                   </a>
                   <a
                     href="#project2"
                     className="block px-4 py-2 text-secondary hover:bg-primary hover:text-white transition-colors"
                   >
-                    Проект 2
+                    Grand Partner AS
                   </a>
                   <a
                     href="#project3"
                     className="block px-4 py-2 text-secondary hover:bg-primary hover:text-white transition-colors"
                   >
-                    Проект 3
+                    Бони интерградба
                   </a>
                 </div>
               )}
             </div>
 
-            <a href="#contact" className="text-secondary hover:text-primary transition-colors">Контакт</a>
+            <a href="#contact" className="text-secondary hover:text-primary transition-colors">
+              Контакт
+            </a>
           </div>
 
           <div className="md:hidden flex items-center">
@@ -69,9 +77,15 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#home" className="block px-3 py-2 text-secondary hover:text-primary">Дома</a>
-            <a href="#brands" className="block px-3 py-2 text-secondary hover:text-primary">Брендови</a>
-            <a href="#products" className="block px-3 py-2 text-secondary hover:text-primary">Изработки</a>
+            <a href="#home" className="block px-3 py-2 text-secondary hover:text-primary">
+              Дома
+            </a>
+            <a href="#brands" className="block px-3 py-2 text-secondary hover:text-primary">
+              Брендови
+            </a>
+            <a href="#products" className="block px-3 py-2 text-secondary hover:text-primary">
+              Изработки
+            </a>
             {/* Проекти for Mobile */}
             <button
               onClick={() => setIsProjectsOpen(!isProjectsOpen)}
@@ -81,12 +95,29 @@ export default function Navbar() {
             </button>
             {isProjectsOpen && (
               <div className="pl-4 space-y-1">
-                <a href="#project1" className="block px-3 py-2 text-secondary hover:text-primary">Hotel Termal Lux & Spa</a>
-                <a href="#project2" className="block px-3 py-2 text-secondary hover:text-primary">Grand Partner AS</a>
-                <a href="#project3" className="block px-3 py-2 text-secondary hover:text-primary">Бони интерградба</a>
+                <a
+                  href="#project1"
+                  className="block px-3 py-2 text-secondary hover:text-primary"
+                >
+                  Hotel Termal Lux & Spa
+                </a>
+                <a
+                  href="#project2"
+                  className="block px-3 py-2 text-secondary hover:text-primary"
+                >
+                  Grand Partner AS
+                </a>
+                <a
+                  href="#project3"
+                  className="block px-3 py-2 text-secondary hover:text-primary"
+                >
+                  Бони интерградба
+                </a>
               </div>
             )}
-            <a href="#contact" className="block px-3 py-2 text-secondary hover:text-primary">Контакт</a>
+            <a href="#contact" className="block px-3 py-2 text-secondary hover:text-primary">
+              Контакт
+            </a>
           </div>
         </div>
       )}
