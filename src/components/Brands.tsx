@@ -27,8 +27,8 @@ export default function Brands() {
     <section id="brands" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-secondary mb-4">Наши Страници</h2>
-          <p className="text-xl text-secondary/80">Дознајте повеќе за нашите изработки</p>
+          <h2 className="text-4xl font-bold text-secondary mb-4">Наши Брендови</h2>
+          <p className="text-xl text-secondary/80">Дознајте повеќе за нас:</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-12">
