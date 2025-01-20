@@ -1,4 +1,7 @@
 import { Car, Package2, Hammer } from 'lucide-react';
+import carsculpImage from './carsculp.jpg'; // Import carsculp image
+import cncDecoratesImage from './cncdecorates.jpg'; // Import cncdecorates image
+import belnedImage from './belned.jpg'; // Import belned image
 
 export default function Brands() {
   const brands = [
@@ -6,19 +9,19 @@ export default function Brands() {
       name: 'Carsculp.com',
       description: 'Декоративни силуети од возила изработени од дрво и плексиглас.',
       icon: Car,
-      image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=800',
+      image: carsculpImage, // Use the imported image here
     },
     {
       name: 'CNC Decorates',
       description: 'Изработка и продажба на декорации од плексиглас и дрво.',
       icon: Package2,
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800',
+      image: cncDecoratesImage, // Use the imported image here
     },
     {
       name: 'BelneD Crafts',
       description: 'Елементи од премиум плексиглас и дрво, ласерско сечени и рачно изработени.',
       icon: Hammer,
-      image: 'https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&q=80&w=800',
+      image: belnedImage, // Use the imported image here
     },
   ];
 
