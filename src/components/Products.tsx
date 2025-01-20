@@ -1,9 +1,14 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper';
 
 export default function Products() {
   const products = [
     {
-      name: 'Персонализирана Силуета од вашете возило!',
+      name: 'Персонализирана Силуета од вашето возило!',
       image: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800',
       category: 'Carsculp.com',
     },
@@ -27,27 +32,44 @@ export default function Products() {
           <p className="text-xl text-white/80">Истраже</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Swiper Slider */}
+        <Swiper
+          modules={[Navigation, Pagination]}
+          navigation
+          pagination={{ clickable: true }}
+          spaceBetween={30}
+          slidesPerView={1}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+        >
           {products.map((product) => (
-            <div key={product.name} className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-64 overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-                />
+            <SwiperSlide key={product.name}>
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="h-64 overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <span className="text-sm text-primary font-semibold">{product.category}</span>
+                  <h3 className="text-xl font-semibold text-secondary mt-2">{product.name}</h3>
+                  <button className="mt-4 btn-primary w-full">Buy Now</button>
+                </div>
               </div>
-              <div className="p-6">
-                <span className="text-sm text-primary font-semibold">{product.category}</span>
-                <h3 className="text-xl font-semibold text-secondary mt-2">{product.name}</h3>
-                <p className="text-secondary/80 mt-2">{product.price}</p>
-                <button className="mt-4 btn-primary w-full">
-                  Buy Now
-                </button>
-              </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );
