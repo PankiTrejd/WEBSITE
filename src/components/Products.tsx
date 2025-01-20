@@ -4,31 +4,49 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 
+// Import images correctly
+import image1 from "./Artboard 1.jpg";
+import image2 from "./Artboard 2.png";
+import image3 from "./Artboard 3.png";
+import image4 from "./Artboard 4.png";
+import image5 from "./Artboard 11.png";
+import image6 from "./Artboard 6.png";
+import image7 from "./Artboard 10.png"; // New Image
+import image8 from "./Artboard 5.png"; // New Image
+
 export default function Products() {
   const products = [
     {
-      image: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800",
-      description: "Персонализирана Силуета од вашето возило!",
+      image: image1,
+      description: "Zebekov dental center - Шаблон Техника.",
     },
     {
-      image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=800",
-      description: "Декоративни букви за секоја прилика.",
+      image: image2,
+      description: "БАЛЏИЕВИ Стоматолошка Поликлиника - Светлечка Реклама со 3Д Букви.",
     },
     {
-      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800",
-      description: "Рачно изработени украси за вашиот дом.",
+      image: image3,
+      description: "The Public - 3Д Букви со метална позадина (ограда).",
     },
     {
-      image: "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&q=80&w=800",
-      description: "Ексклузивни 3D производи.",
+      image: image4,
+      description: "Гранд Партнер АС - 3Д Букви Светлчека реклама закачена на ѕид.",
     },
     {
-      image: "https://images.unsplash.com/photo-1542293787938-c9e299b88010?auto=format&fit=crop&q=80&w=800",
-      description: "Персонализирани реклами и декорации.",
+      image: image5,
+      description: "Hotel Termal Lux & Spa - 3Д Букви Светлечка Реклама.",
     },
     {
-      image: "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&q=80&w=800",
-      description: "Уникатни производи за специјални моменти.",
+      image: image6,
+      description: "Hotel Termal Lux & Spa - Декорација на цела рецепција со плексиглас и Метални изработки.",
+    },
+    {
+      image: image7,
+      description: "Ресторан за свадби „Ла Тана“ - Бројки за маса. ",
+    },
+    {
+      image: image8,
+      description: "Studio Nikolov - 3Д букви светлечка реклама со метален држач.",
     },
   ];
 

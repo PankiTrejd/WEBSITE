@@ -14,7 +14,7 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="relative text-center max-w-4xl mx-auto px-6">
         <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-wide">
-          Вашиот партнер за <span className="text-primary">креативни решенија</span>
+          Вашиот партнер за <span className="text-primary">креативни решенија!</span>
         </h1>
         <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
           Професионални услуги за изработка на реклами, декорации и уникатни производи што ги истакнуваат вашите идеи.
