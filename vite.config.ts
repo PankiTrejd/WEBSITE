@@ -13,7 +13,7 @@ export default defineConfig({
     assetsDir: 'assets',
     sourcemap: true,
     rollupOptions: {
-      input: 'src/main.tsx', // Explicitly set the entry point
+      input: 'index.html', // The build entry point is the HTML file
     },
   },
   base: './', // Use relative paths for deployment
