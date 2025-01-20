@@ -35,43 +35,55 @@ export default function Products() {
   return (
     <section id="products" className="py-24 bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-white mb-4">Наши Изработки</h2>
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white">Наши Изработки</h2>
+          <p className="text-lg text-white/80 mt-4">
+            Уникатни производи за секоја прилика.
+          </p>
         </div>
 
         {/* Swiper Slider */}
         <Swiper
           modules={[Autoplay, Navigation]}
           autoplay={{
-            delay: 5000,
+            delay: 4000,
             disableOnInteraction: false,
           }}
-          navigation
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
           loop={true}
-          spaceBetween={20}
+          spaceBetween={30}
           slidesPerView={1}
           className="max-w-4xl mx-auto"
         >
           {products.map((product, index) => (
             <SwiperSlide key={index}>
-              <div className="h-96 overflow-hidden rounded-lg">
+              <div className="overflow-hidden rounded-lg shadow-md">
                 <img
                   src={product.image}
                   alt={`Product ${index + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-96 object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
-              <div className="text-center mt-4">
+              <div className="text-center mt-6">
                 <p className="text-lg text-white">{product.description}</p>
               </div>
             </SwiperSlide>
           ))}
+
+          {/* Custom Navigation Arrows */}
+          <div className="swiper-button-next text-white text-3xl hover:text-primary transition-colors"></div>
+          <div className="swiper-button-prev text-white text-3xl hover:text-primary transition-colors"></div>
         </Swiper>
 
-        {/* Paragraph below the slider */}
-        <div className="text-center mt-8">
+        {/* Section Footer */}
+        <div className="text-center mt-12">
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Погледнете дел од нашите изработки кои го истакнуваат нашиот квалитет и уникатност. Дознајте повеќе за нашите производи!
+            Погледнете дел од нашите изработки кои го истакнуваат нашиот квалитет
+            и уникатност. Дознајте повеќе за нашите производи!
           </p>
         </div>
       </div>
