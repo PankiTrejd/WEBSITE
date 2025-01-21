@@ -1,6 +1,47 @@
+import { useState } from 'react';
 import { Phone, Mail, Instagram, Facebook } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        'your_service_id', // Replace with your EmailJS Service ID
+        'your_template_id', // Replace with your EmailJS Template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        'your_public_key' // Replace with your EmailJS Public Key
+      );
+      setSuccessMessage('Вашето барање е успешно испратено!');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      setErrorMessage('Настана грешка при испраќањето на барањето.');
+      console.error('EmailJS Error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +86,7 @@ export default function Contact() {
           </div>
 
           {/* Right Contact Form */}
-          <form className="space-y-6 bg-secondary p-8 rounded-lg shadow-lg">
+          <form className="space-y-6 bg-secondary p-8 rounded-lg shadow-lg" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name" className="block text-lg font-medium text-white">
                 Име
@@ -54,7 +95,10 @@ export default function Contact() {
                 type="text"
                 id="name"
                 placeholder="Вашето име"
+                value={formData.name}
+                onChange={handleInputChange}
                 className="mt-2 block w-full rounded-md bg-white border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none p-3"
+                required
               />
             </div>
             <div>
@@ -65,7 +109,10 @@ export default function Contact() {
                 type="email"
                 id="email"
                 placeholder="Вашата емаил адреса"
+                value={formData.email}
+                onChange={handleInputChange}
                 className="mt-2 block w-full rounded-md bg-white border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none p-3"
+                required
               />
             </div>
             <div>
@@ -76,15 +123,21 @@ export default function Contact() {
                 id="message"
                 rows={4}
                 placeholder="Внесете ја вашата порака"
+                value={formData.message}
+                onChange={handleInputChange}
                 className="mt-2 block w-full rounded-md bg-white border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none p-3"
+                required
               ></textarea>
             </div>
             <button
               type="submit"
               className="w-full py-3 rounded-md bg-primary text-white font-semibold hover:bg-primary-dark transition-colors"
+              disabled={isSubmitting}
             >
-              Испрати Барање
+              {isSubmitting ? 'Се испраќа...' : 'Испрати Барање'}
             </button>
+            {successMessage && <p className="text-green-500 mt-4">{successMessage}</p>}
+            {errorMessage && <p className="text-red-500 mt-4">{errorMessage}</p>}
           </form>
         </div>
       </div>
