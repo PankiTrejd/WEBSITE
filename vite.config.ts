@@ -11,10 +11,10 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: true,
     rollupOptions: {
-      input: 'src/main.tsx', // Explicitly set the entry point
+      input: './index.html', // Ensure index.html is the entry point
     },
+    sourcemap: true, // Optional, helps with debugging
   },
-  base: './', // Use relative paths
+  base: './', // Ensures relative paths are used
 });
