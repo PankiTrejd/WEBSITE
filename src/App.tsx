@@ -1,11 +1,11 @@
 import React from 'react';
-import { Car, Package2, Hammer, Phone, Mail, Instagram, Facebook, ChevronDown } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Brands from './components/Brands';
 import Products from './components/Products';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import MenuSection from './components/MenuSection';
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Hero />
         <Brands />
         <Products />
+        <MenuSection /> {/* New Section */}
         <Contact />
       </main>
       <Footer />
