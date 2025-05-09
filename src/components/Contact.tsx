@@ -23,14 +23,23 @@ export default function Contact() {
 
     try {
       await emailjs.send(
+<<<<<<< HEAD
         'service_4vo1nhl', // Provided Service ID
         'template_bqerzgg', // Provided Template ID
+=======
+        'your_service_id', // Replace with your EmailJS Service ID
+        'your_template_id', // Replace with your EmailJS Template ID
+>>>>>>> 756776fd04abc8abe75642587e8b718a8b861629
         {
           name: formData.name,
           email: formData.email,
           message: formData.message,
         },
+<<<<<<< HEAD
         'glKWTE_PKdXvV8eGB' // Provided Public Key
+=======
+        'your_public_key' // Replace with your EmailJS Public Key
+>>>>>>> 756776fd04abc8abe75642587e8b718a8b861629
       );
       setSuccessMessage('Вашето барање е успешно испратено!');
       setFormData({ name: '', email: '', message: '' });

@@ -1,11 +1,15 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import logo from '/src/components/logo.png'; // Import the logo
+<<<<<<< HEAD
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+=======
+>>>>>>> 756776fd04abc8abe75642587e8b718a8b861629
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isProjectsOpen, setIsProjectsOpen] = useState(false); // State for "Проекти" dropdown
+<<<<<<< HEAD
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -22,6 +26,8 @@ export default function Navbar() {
     setIsOpen(false);
     setIsProjectsOpen(false);
   };
+=======
+>>>>>>> 756776fd04abc8abe75642587e8b718a8b861629
 
   return (
     <nav className="bg-white shadow-lg fixed w-full z-50">
@@ -36,6 +42,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
+<<<<<<< HEAD
             <button
               onClick={() => handleNav('home')}
               className="text-secondary hover:text-primary transition-colors"
@@ -70,6 +77,65 @@ export default function Navbar() {
             >
               Контакт
             </button>
+=======
+            <a
+              href="#home"
+              className="text-secondary hover:text-primary transition-colors"
+            >
+              Дома
+            </a>
+            <a
+              href="#brands"
+              className="text-secondary hover:text-primary transition-colors"
+            >
+              Брендови
+            </a>
+            <a
+              href="#products"
+              className="text-secondary hover:text-primary transition-colors"
+            >
+              Изработки
+            </a>
+
+            {/* Проекти Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setIsProjectsOpen(!isProjectsOpen)}
+                className="text-secondary hover:text-primary transition-colors"
+              >
+                Проекти
+              </button>
+              {isProjectsOpen && (
+                <div className="absolute mt-2 bg-white shadow-md rounded-md w-48">
+                  <a
+                    href="#project1"
+                    className="block px-4 py-2 text-secondary hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Hotel Termal Lux & Spa
+                  </a>
+                  <a
+                    href="#project2"
+                    className="block px-4 py-2 text-secondary hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Grand Partner AS
+                  </a>
+                  <a
+                    href="#project3"
+                    className="block px-4 py-2 text-secondary hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Бони интерградба
+                  </a>
+                </div>
+              )}
+            </div>
+
+            <a
+              href="#contact"
+              className="text-secondary hover:text-primary transition-colors"
+            >
+              Контакт
+            </a>
+>>>>>>> 756776fd04abc8abe75642587e8b718a8b861629
           </div>
 
           {/* Mobile Menu Button */}
@@ -88,6 +154,7 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+<<<<<<< HEAD
             <button
               onClick={() => handleNav('home')}
               className="block px-3 py-2 text-secondary hover:text-primary"
@@ -120,6 +187,61 @@ export default function Navbar() {
             >
               Контакт
             </button>
+=======
+            <a
+              href="#home"
+              className="block px-3 py-2 text-secondary hover:text-primary"
+            >
+              Дома
+            </a>
+            <a
+              href="#brands"
+              className="block px-3 py-2 text-secondary hover:text-primary"
+            >
+              Брендови
+            </a>
+            <a
+              href="#products"
+              className="block px-3 py-2 text-secondary hover:text-primary"
+            >
+              Изработки
+            </a>
+            {/* Проекти for Mobile */}
+            <button
+              onClick={() => setIsProjectsOpen(!isProjectsOpen)}
+              className="block px-3 py-2 text-secondary hover:text-primary"
+            >
+              Проекти
+            </button>
+            {isProjectsOpen && (
+              <div className="pl-4 space-y-1">
+                <a
+                  href="#project1"
+                  className="block px-3 py-2 text-secondary hover:text-primary"
+                >
+                  Hotel Termal Lux & Spa
+                </a>
+                <a
+                  href="#project2"
+                  className="block px-3 py-2 text-secondary hover:text-primary"
+                >
+                  Grand Partner AS
+                </a>
+                <a
+                  href="#project3"
+                  className="block px-3 py-2 text-secondary hover:text-primary"
+                >
+                  Бони интерградба
+                </a>
+              </div>
+            )}
+            <a
+              href="#contact"
+              className="block px-3 py-2 text-secondary hover:text-primary"
+            >
+              Контакт
+            </a>
+>>>>>>> 756776fd04abc8abe75642587e8b718a8b861629
           </div>
         </div>
       )}
