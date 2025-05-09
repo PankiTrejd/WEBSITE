@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-orange: #F68121;
+  --color-dark-gray: #211D1E;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-[#211D1E];
+  }
+}
+
+.btn-primary {
+  @apply bg-[#F68121] text-white px-6 py-3 rounded-md hover:bg-[#e67316] transition-colors duration-300;
+}
+
+.btn-secondary {
+  @apply border-2 border-[#F68121] text-[#F68121] px-6 py-3 rounded-md hover:bg-[#F68121] hover:text-white transition-colors duration-300;
+}
