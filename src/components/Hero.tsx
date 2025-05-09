@@ -1,9 +1,4 @@
 import { ChevronDown } from 'lucide-react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Package, Home, Lightbulb, BadgePercent } from 'lucide-react';
-=======
->>>>>>> 756776fd04abc8abe75642587e8b718a8b861629
 import weblad from '/src/components/weblad.jpg'; // Import the image
 
 export default function Hero() {

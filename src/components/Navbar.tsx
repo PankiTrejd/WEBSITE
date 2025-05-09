@@ -5,18 +5,16 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isProjectsOpen, setIsProjectsOpen] = useState(false); // State for "Проекти" dropdown
+  const [isProjectsOpen, setIsProjectsOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
   // Helper to handle navigation and scroll
   const handleNav = (sectionId: string) => {
     if (location.pathname === '/') {
-      // Already on homepage, just scroll
       const el = document.getElementById(sectionId);
       if (el) el.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // Navigate to homepage and scroll after navigation
       navigate('/', { state: { scrollTo: sectionId } });
     }
     setIsOpen(false);

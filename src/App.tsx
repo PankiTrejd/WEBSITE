@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-=======
-import React from 'react';
->>>>>>> 756776fd04abc8abe75642587e8b718a8b861629
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Brands from './components/Brands';
@@ -11,7 +7,6 @@ import Products from './components/Products';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import MenuSection from './components/MenuSection';
-<<<<<<< HEAD
 import ProjectHotelTermal from './components/ProjectHotelTermal';
 import ProjectGrandPartner from './components/ProjectGrandPartner';
 import ProjectBoni from './components/ProjectBoni';
@@ -34,15 +29,10 @@ function App() {
     }
   }, [location]);
 
-=======
-
-function App() {
->>>>>>> 756776fd04abc8abe75642587e8b718a8b861629
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
       <main>
-<<<<<<< HEAD
         <Routes>
           <Route path="/" element={
             <>
@@ -70,13 +60,6 @@ function App() {
           <Route path="/projects/emily-exclusive" element={<ProjectEmilyExclusive />} />
           <Route path="/projects" element={<ProjectsComingSoon />} />
         </Routes>
-=======
-        <Hero />
-        <Brands />
-        <Products />
-        <MenuSection /> {/* New Section */}
-        <Contact />
->>>>>>> 756776fd04abc8abe75642587e8b718a8b861629
       </main>
       <Footer />
     </div>
