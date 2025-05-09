@@ -9,7 +9,7 @@ export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Helper to handle navigation and scroll
+  
   const handleNav = (sectionId: string) => {
     if (location.pathname === '/') {
       const el = document.getElementById(sectionId);
